@@ -8,7 +8,7 @@ pipeline {
                    if (isUnix()) {
                         sh 'docker build -t studentgrade:latest .'
                    } else {
-                        bat 'docker build -t studentgrade:latest .'
+                        bat '"C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe" build -t studentgrade:latest .'
                    }
                 }
             }
@@ -19,7 +19,7 @@ pipeline {
                     if (isUnix()) {
                         sh 'docker run --rm studentgrade:latest pytest'
                     } else {
-                        bat 'docker run --rm studentgrade:latest pytest'
+                        bat '"C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe" run --rm studentgrade:latest pytest'
                     }
                 }
             }
