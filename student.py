@@ -1,4 +1,6 @@
 def calculate_grade(avg):
+    if avg < 0 or avg > 100:
+        return "F"
     if avg >= 90:
         return "S"
     elif avg >= 80:
